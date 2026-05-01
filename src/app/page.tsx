@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 
 export default function Home() {
@@ -34,6 +35,9 @@ export default function Home() {
 
         {/* Header */}
         <div className="text-center mb-8">
+          <div className="flex justify-center mb-6">
+            <Image src="/logo.png" alt="Logo" width={120} height={48} className="object-contain" />
+          </div>
           <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Contact Us</h1>
           <p className="mt-2 text-sm text-gray-400">Fill in the form and we'll get back to you</p>
         </div>
