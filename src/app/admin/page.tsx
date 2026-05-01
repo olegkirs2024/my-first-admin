@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { supabase } from "@/lib/supabase";
 
 type Status = "New" | "In Progress" | "Done";
@@ -62,16 +63,21 @@ export default function AdminPage() {
       <div className="max-w-2xl mx-auto">
 
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Admin Panel</h1>
-            <p className="mt-1 text-sm text-gray-400">Manage incoming requests</p>
+        <div className="mb-8">
+          <div className="flex justify-center mb-6">
+            <Image src="/logo.png" alt="Logo" width={120} height={48} className="object-contain" />
           </div>
-          <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-black">
-            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-            </svg>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Admin Panel</h1>
+              <p className="mt-1 text-sm text-gray-400">Manage incoming requests</p>
+            </div>
+            <div className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-black">
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+              </svg>
+            </div>
           </div>
         </div>
 
